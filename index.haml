@@ -1,0 +1,242 @@
+!!!
+%html
+	%head
+		%meta{:charset=>"utf-8"}
+		%meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+
+		%title Test-UpQcode
+		
+		%link{:href => "css/bootstrap.css", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
+		%link{:href => "css/mobile.css", :rel => "stylesheet", :type => "text/css"}
+		
+		%script{:src => "js/jquery-2.1.3.min.js", :type => "text/javascript"}
+		%script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
+	%body
+		.container-fluid
+			.row.header
+				.header-menu.col-xs-16.col-sm-16.col-md-16.col-lg-12.col-lg-offset-2.col-md-offset-0.col-sm-offset-0.col-xs-offset-0
+
+					-#logo
+					.head-logo
+						%a.header-logo{'href'=>'#','title'=>'logo'}
+
+					-#menu	
+					.head-menu
+						%nav.menu_bar
+							%li.menu_button
+								%a.menu-link.black-color{'href'=>'#home','title'=>""} Home
+								%ul.menu.top_menu
+									%li.sub-list
+										%a.menu_item{'href'=>'#','title'=>""} Name Surname
+									%li.sub-list
+										%a.menu_item{'href'=>'#','title'=>""} Name Surname
+									%li.sub-list
+										%a.menu_item{'href'=>'#','title'=>""} Name Surname
+									%li.sub-list.sub_menu_container
+										%a.menu_item{'href'=>'#','title'=>""} Name Surname
+										%ul.menu.sub_menu
+											%li.menu_item Name Surname
+											%li.menu_item Name Surname
+											%li.menu_item.sub_menu_container
+												Name Surname
+												%ul.menu.sub_menu
+													%li.menu_item Name Surname
+													%li.menu_item Name Surname
+
+								
+							%li.menu_button
+								%a.menu-link.black-color{'href'=>'#products','title'=>""} Products
+							%li.menu_button
+								%a.menu-link.black-color{'href'=>'#about','title'=>""} About
+							%li.menu_button
+								%a.menu-link.black-color{'href'=>'#contacts','title'=>""} Contacts
+
+					-#search
+					.header-search-box.head-serch
+						%form
+							%lable{'for'=>'search'}
+							%input#search.header-search{'type'=>'text'}
+
+
+			-#slider
+			#home.row.slider
+					
+				#carousel-example.carousel.slide{"data-ride" => "carousel"}
+					-#Indicators
+					%ol.carousel-indicators
+						%li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+						%li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+						%li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+					-#Wrapper for slides
+					.carousel-inner
+						.item.active
+							%img.bg-position{'src'=>'./img//slider-1.png'}
+								 
+						.item
+							%img{:alt => "nature", :src => "http://lorempixel.com/1600/790/nature/2"}
+						.item
+							%img{:alt => "nature", :src => "http://lorempixel.com/1600/790/nature/3"}
+					-#Controls
+					%a.left.carousel-control.hidden-xs{"data-slide" => "prev", :href => "#carousel-example"}
+						%span.slider-arrow.slider-arrow-left
+					%a.right.carousel-control.hidden-xs{"data-slide" => "next", :href => "#carousel-example"}
+						%span.slider-arrow.slider-arrow-right
+
+
+			-#CHOOSE US
+			#products.row
+				.aline.col-xs-16.col-sm-16.col-md-16.col-lg-12.col-lg-offset-2.col-md-offset-0.col-sm-offset-0.col-xs-offset-0
+					-#choose title
+					
+					%h1.black-color.h-title Why 
+					%h1.blue-color.h-title Choose Us
+					%p.h-description.grey-color Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus.
+					-#choose boxes	
+					.choose-icon-box
+						.choose-box
+							%img.choose-icon{'src'=>'./img/icon-1.png', 'alt'=>''}
+							%a.choose-link{'href'=>'#', 'title'=>''}
+								%h3.black-color.choose-link-title your title
+								%h4.choose-link-description.black-color Duis bibendum diam non erat facilaisis en ter tincidunt. Duis
+								%img.choose-icon-hov{'src'=>'./img/purple-hover.png', 'alt'=>''}
+						
+						.choose-box
+							%img.choose-icon{'src'=>'./img/icon-2.png', 'alt'=>''}
+							%a.choose-link{'href'=>'#', 'title'=>''}
+								%h3.black-color.choose-link-title your title
+								%h4.choose-link-description.black-color Duis bibendum diam non erat facilaisis en ter tincidunt. Duis
+								%img.choose-icon-hov{'src'=>'./img/purple-hover.png', 'alt'=>''}
+						
+							
+						.choose-box
+							%img.choose-icon{'src'=>'./img/icon-3.png', 'alt'=>''}
+							%a.choose-link{'href'=>'#', 'title'=>''}
+								%h3.black-color.choose-link-title your title
+								%h4.choose-link-description.black-color Duis bibendum diam non erat facilaisis en ter tincidunt. Duis
+								%img.choose-icon-hov{'src'=>'./img/purple-hover.png', 'alt'=>''}
+						
+						.choose-box
+							%img.choose-icon{'src'=>'./img/icon-4.png', 'alt'=>''}
+							%a.choose-link{'href'=>'#', 'title'=>''}
+								%h3.black-color.choose-link-title your title
+								%h4.choose-link-description.black-color Duis bibendum diam non erat facilaisis en ter tincidunt. Duis
+								%img.choose-icon-hov{'src'=>'./img/purple-hover.png', 'alt'=>''}
+						
+						.choose-box
+							%img.choose-icon{'src'=>'./img/icon-5.png', 'alt'=>''}
+							%a.choose-link{'href'=>'#', 'title'=>''}
+								%h3.black-color.choose-link-title your title
+								%h4.choose-link-description.black-color Duis bibendum diam non erat facilaisis en ter tincidunt. Duis
+								%img.choose-icon-hov{'src'=>'./img/purple-hover.png', 'alt'=>''}
+			-#ABOUT US					
+			#about.row
+				.col-xs-16.col-sm-16.col-md-16.col-lg-12.col-lg-offset-2.col-md-offset-0.col-sm-offset-0.col-xs-offset-0
+					
+					.col-lg-8.col-md-8.col-sm-8.col-xs-16.mob-about
+						%h1.h-title.blue-color about
+						%h1.h-title.black-color us
+						%p.h-description.grey-color Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus.
+						%p.h-description.black-color.mob-description Nullam at scelerisque tellus. Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a. Vestibulum accumsan tincidunt odio vel finibus. Phasellus vestibulum lobortis ligula ut volutpat. Maecenas vitae nibh vel purus mollis semper. Nullam tempus feugiat mi id semper. Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam. 
+
+						-#progress bar 79
+						%span.progress-title.black-color photoshop
+						%span.progress-title.black-color.right 79%
+
+						.p-bar
+							%progress.p-line.p-name-79
+
+						-#progress bar 90
+						%span.progress-title.black-color html/css
+						%span.progress-title.black-color.right 90%
+
+						.p-bar
+							%progress.p-line.p-name-90
+
+						-#progress bar 69
+						%span.progress-title.black-color javascript
+						%span.progress-title.black-color.right 69%
+
+						.p-bar
+							%progress.p-line.p-name-69
+
+						-#progress bar 92
+						%span.progress-title.black-color wordpress
+						%span.progress-title.black-color.right 92%
+
+						.p-bar
+							%progress.p-line.p-name-92
+
+
+					.col-lg-8.col-md-8.col-sm-8.col-xs-16
+						.ipad-icon
+
+
+			.row
+				.col-xs-16.col-sm-16.col-md-16.col-lg-12.col-lg-offset-2.col-md-offset-0.col-sm-offset-0.col-xs-offset-0.aline
+
+					%h1.black-color.h-title get in 
+					%h1.blue-color.h-title touch
+					%p.h-description.grey-color Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus.
+			-#Contacts
+			#contacts.row.contacts
+				.c-style.col-xs-16.col-sm-16.col-md-12.col-lg-12.col-lg-offset-2.col-md-offset-2.col-sm-offset-0.col-xs-offset-0
+
+					.col-lg-10.col-md-10.col-sm-10.col-xs-16.mob-form
+						%form
+							%lable{'for'=>'name'}
+							%input#name.c-inpt{'placeholder'=>'Full Name'}
+
+							.c-dropdown.c-inpt
+								E-mail Address
+								%ul.c-list
+									%li
+										%a.black-color.c-list-link{'href'=>'#', 'title'=>''} somename@mail.com
+
+									%li
+										%a.black-color.c-list-link{'href'=>'#', 'title'=>''} name@mail.com
+									%li
+										%a.black-color.c-list-link{'href'=>'#', 'title'=>''} yourname@mail.com
+
+							%textarea.c-text-place{'placeholder'=>'Message'}
+							%input#checked.c-check{'type'=>'checkbox'}
+							%lable.c-check-lbl{'for'=>'checked'} I like your company
+
+							%button.c-bnt-send.black-color send
+
+
+					.col-lg-6.col-md-6.col-sm-6.col-xs-16.c-address-style
+						%address.c-adress-color
+							69/A, Some Street Name
+							.br
+							Your City, code 01234
+							.br
+							Country Name
+						%p.c-adress-color +860 987 648 74 95
+						%p.c-adress-color +880 123 456 78 98
+						%p.c-adress-color +860 987 648 74 95
+
+						%p.c-adress-color company@mail.com
+						%p.c-adress-color sales@mail.com
+			.footer
+				%span.f-copy Copyright © Company. All Rights Reserved  2016
+				%ul.social
+					%li
+						%a.twitter{'href'=>'#', 'title'=>''}
+
+					%li
+						%a.google{'href'=>'#', 'title'=>''}
+
+					%li
+						%a.facebook{'href'=>'#', 'title'=>''}
+					%li
+						%a.dr{'href'=>'#', 'title'=>''}
+
+
+				
+								
+
+
+
+
+					
